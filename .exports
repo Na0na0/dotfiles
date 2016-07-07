@@ -33,7 +33,7 @@ export LESS_TERMCAP_md="${yellow}";
 export MANPAGER='less -X';
 
 # Homebrew exports if on OSX
-if [[ $(uname) == "Darwin" ]]; then 
+if [[ $(uname) != "Linux" ]]; then 
   # Add brew to path
   export PATH=$HOME/.brew/bin:$PATH
 
