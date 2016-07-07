@@ -28,3 +28,14 @@ export LESS_TERMCAP_md="${yellow}";
 
 # Don’t clear the screen after quitting a manual page.
 export MANPAGER='less -X';
+
+# Homebrew exports if on OSX
+if [[ $(uname) == "Darwin" ]]; then 
+  # Add brew to path
+  export PATH=$HOME/.brew/bin:$PATH
+
+  # Set Homebrew temporary folders
+  export HOMEBREW_CACHE=/tmp/$USER/Homebrew/Caches
+  export HOMEBREW_TEMP=/tmp/$USER/Homebrew/Temp
+  export HOMEBREW_LOCKS=/tmp/$USER/Homebrew/Locks
+fi
